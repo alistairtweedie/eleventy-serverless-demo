@@ -4,12 +4,12 @@ pagination:
   data: posts
   alias: post 
   size: 1
-  serverless: eleventy.serverless.path.slug
+  serverless: eleventy.serverless.path.date.slug
   addAllPagesToCollections: true
   resolve: values
 permalink: 
-  build: "/{{post.slug}}/"
-  preview: "/preview/:slug/"
+  build: "/{{post.date}}/{{post.slug}}/"
+  preview: "/preview/:date/:slug/"
 ---
 {%- include "_nav.njk" -%}
 
